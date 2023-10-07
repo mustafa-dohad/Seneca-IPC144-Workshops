@@ -11,7 +11,7 @@ shared with any other student or 3rd party content provider. This submitted
 piece of work is entirely of my own creation.
 /////////////////////////////////////////////////////////////////////////*/
 
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS // This directive suppresses warnings for certain functions in some environments.
 
 #include <stdio.h>
 
@@ -24,11 +24,14 @@ int main(void)
     int priority[MAX_ITEMS] = {0}, num_items;
     char finance_op[MAX_ITEMS];
 
+    // Display program header.
     printf("+--------------------------+\n");
     printf("|   Wish List Forecaster   |\n");
     printf("+--------------------------+\n");
+
     int valid_income = 0, valid_wishlist = 0;
 
+    // Validate and input monthly NET income.
     while (!valid_income)
     {
         printf("\nEnter your monthly NET income: $");
@@ -36,7 +39,7 @@ int main(void)
 
         if (income >= min_income && income <= max_income)
         {
-            valid_income = 1;
+            valid_income = 1; // Income is valid, exit the loop.
         }
         else if (income < min_income)
         {
@@ -44,10 +47,11 @@ int main(void)
         }
         else if (income > max_income)
         {
-            printf("ERROR: Liar! I'll believe you if you enter a value no more than $400000.00\n");
+            printf("ERROR: Liar! I'll believe you if you enter a value no more than $400,000.00\n");
         }
     }
 
+    // Validate and input the number of wish list items.
     while (!valid_wishlist)
     {
         printf("\nHow many wish list items do you want to forecast?: ");
@@ -55,7 +59,7 @@ int main(void)
 
         if (num_items >= 1 && num_items <= MAX_ITEMS)
         {
-            valid_wishlist = 1;
+            valid_wishlist = 1; // Number of items is valid, exit the loop.
         }
         else
         {
@@ -63,11 +67,13 @@ int main(void)
         }
     }
 
+    // Input details for each wish list item.
     for (int i = 0; i < num_items; i++)
     {
         int valid_cost = 0, valid_priority = 0, valid_finance = 0;
         printf("\nItem-%d Details:\n", i + 1);
 
+        // Validate and input item cost.
         while (!valid_cost)
         {
             printf("   Item cost: $");
@@ -75,8 +81,8 @@ int main(void)
 
             if (cost[i] >= min_cost)
             {
-                total_cost += cost[i];
-                valid_cost = 1;
+                total_cost += cost[i]; // Update the total cost.
+                valid_cost = 1; // Cost is valid, exit the loop.
             }
             else
             {
@@ -84,6 +90,7 @@ int main(void)
             }
         }
 
+        // Validate and input item priority.
         while (!valid_priority)
         {
             printf("   How important is it to you? [1=must have, 2=important, 3=want]: ");
@@ -91,7 +98,7 @@ int main(void)
 
             if (priority[i] >= 1 && priority[i] <= 3)
             {
-                valid_priority = 1;
+                valid_priority = 1; // Priority is valid, exit the loop.
             }
             else
             {
@@ -99,6 +106,7 @@ int main(void)
             }
         }
 
+        // Validate and input financing options.
         while (!valid_finance)
         {
             printf("   Does this item have financing options? [y/n]: ");
@@ -106,7 +114,7 @@ int main(void)
 
             if (finance_op[i] == 'y' || finance_op[i] == 'n')
             {
-                valid_finance = 1;
+                valid_finance = 1; // Financing option is valid, exit the loop.
             }
             else
             {
@@ -115,6 +123,7 @@ int main(void)
         }
     }
 
+    // Display a table of wish list items with priority, financing option, and cost.
     printf("\nItem Priority Financed        Cost\n");
     printf("---- -------- -------- -----------\n");
 
@@ -125,7 +134,7 @@ int main(void)
 
     printf("---- -------- -------- -----------\n");
     printf("                      $%11.2lf\n\n", total_cost);
-    printf("Best of luck in all your future endeavours!\n");
+    printf("Best of luck in all your future endeavors!\n");
 
     return 0;
 }
