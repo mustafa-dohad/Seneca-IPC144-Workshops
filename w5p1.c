@@ -11,7 +11,7 @@ shared with any other student or 3rd party content provider. This submitted
 piece of work is entirely of my own creation.
 /////////////////////////////////////////////////////////////////////////*/
 
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS // This directive suppresses warnings for certain functions in some environments.
 
 #include <stdio.h>
 
@@ -20,25 +20,32 @@ piece of work is entirely of my own creation.
 
 int main(void)
 {
-    const int JAN=1, DEC=12;
-    int year, month; 
+    const int JAN = 1, DEC = 12;
+    int year, month;
+
+    // Display program header.
     printf("General Well-being Log\n");
     printf("======================\n");
+
     do
     {
+        // Input year and month for the well-being log.
         printf("Set the year and month for the well-being log (YYYY MM): ");
         scanf("%d %d", &year, &month);
+
         if ((year >= MIN_YEAR && year <= MAX_YEAR) && (month >= JAN && month <= DEC))
         {
             printf("\n*** Log date set! ***");
+
+            // Convert numeric month to its corresponding three-letter abbreviation.
             switch (month)
             {
             case 1:
                 printf("\n\nLog starting date: %d-JAN-01\n", year);
                 break;
             case 2:
-                  printf("\n\nLog starting date: %d-FEB-01\n", year);
-                  break;
+                printf("\n\nLog starting date: %d-FEB-01\n", year);
+                break;
             case 3:
                 printf("\n\nLog starting date: %d-MAR-01\n", year);
                 break;
@@ -68,18 +75,17 @@ int main(void)
                 break;
             case 12:
                 printf("\n\nLog starting date: %d-DEC-01\n", year);
-                break;                
+                break;
             default:
                 break;
             }
             break;
         }
-        else if ((year < MIN_YEAR || year > MAX_YEAR)&&(month < JAN || month > DEC))
+        else if ((year < MIN_YEAR || year > MAX_YEAR) && (month < JAN || month > DEC))
         {
             printf("   ERROR: The year must be between 2012 and 2022 inclusive\n");
             printf("   ERROR: Jan.(1) - Dec.(12)\n");
         }
-        
         else if (year < MIN_YEAR || year > MAX_YEAR)
         {
             printf("   ERROR: The year must be between 2012 and 2022 inclusive\n");
@@ -89,6 +95,6 @@ int main(void)
             printf("   ERROR: Jan.(1) - Dec.(12)\n");
         }
     } while (1);
-    
+
     return 0;
 }
