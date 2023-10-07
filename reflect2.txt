@@ -1,0 +1,54 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #2 (P2)
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+Email      : mna26@myseneca.ca
+Section    : ZGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1. Price1 does not accurately represent the expected value
+   because the "float" data type cannot be represented exactly
+   decimal value 17.96 due to its limitations in the binary system
+   represent. All  other samples work as expected
+   because the values ​​17.98 and 17.96 are more approximate
+   according to data types "float" and "double".
+
+2.
+    1: The first example works through implicit coercion,
+       where the value "int"  "money" is implicitly converted to
+       "double" when divided by "100.0", gives the correct result.
+    2: The second example also works through explicit coercion,
+       where the value "int"  "money" is explicitly converted to a
+       "double" before dividing by "100.0".
+    3: The third example works similarly to the second example, using
+       explicit coercion by explicitly converting “money” to “double”
+       before dividing by "100.0".
+
+3.  A. The value of the “result” variable  is 72 because it is 
+       the result of dividing the integer “money” by 100. 
+    B. Displayed value:
+       1. Sample 1:
+       Displays the value 72.00, where implicit
+       Promotion occurs as "money" is divided by 100, converted
+       the result to a double for proper formatting
+       2. Sample 2:
+       Displays garbage data because "%d" is used for
+       formats a double value, causing undefined behavior.
+       3. Sample 3:
+       Show value 72.00, using  "result"
+       variable,  is an integer that is implicitly promoted to a double
+       to format.
+       4. Sample 4:
+       Displays the value 72 as an integer.
+
+    C. The printf function causes patterns one and three to not  work as
+       expected because implicit promotion occurs during formatting. That is
+       it is essential to use the correct format specifier ("%lf" for double and
+       "%d" for integer) to match the data type of the value you're trying to print.

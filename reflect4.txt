@@ -1,0 +1,29 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #4
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. My code achieves readability and maintainability primarily through consistent 
+   indentation, variable naming and logical structure and comments.
+
+2. Without the ability to nest loops and conditions, the code for this workshop 
+   would experience several notable impacts:
+   1- Code Repetition.
+   2- Increased Complexity.
+   3- Readability.
+   4- Maintenance Challenges.
+   5- Scalability Issues.
+   basically without nesting the would become more repetitive less organized 
+   and harder to read due to absence of structured
+   conditional logic. 
+
+3. Using a series of "if" statements instead of "if/else if.." chains is 
+   inefficient because it leads to redundancy, complexity, hard readability 
+   and unnecessary execution.

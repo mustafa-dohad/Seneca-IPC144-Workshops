@@ -1,0 +1,84 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #3 (P2)
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+Email      : mna26@myseneca.ca
+Section    : ZGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+
+1.                           For Coffee 1:
+         Relational Expressions:
+            user_s == 'L' || user_s == 'l': Checks if the user's preference is 'L' or 'l' (Light).
+            1 <= servings && servings <= 4: Checks if the number of servings is between 1 and 4.
+            usercream == 'y' || usercream == 'Y': Checks if the user wants cream ('y' or 'Y').
+
+         Logical Expression:
+            ((user_s == 'L' || user_s == 'l') && (1 <= servings && servings <= 4) && (usercream == 'y' || usercream == 'Y')): 
+            Evaluates to true if all the above relational expressions are true.
+
+
+                             For Coffee 2:
+         Relational Expressions:
+             user_s == 'M' || user_s == 'm': Checks if the user's preference is 'M' or 'm' (Medium).
+             5 <= servings && servings <= 9: Checks if the number of servings is between 5 and 9.
+             usercream == 'y' || usercream == 'Y': Checks if the user wants cream ('y' or 'Y').
+
+         Logical Expression:
+            ((user_s == 'M' || user_s == 'm') && (5 <= servings && servings <= 9) && (usercream == 'y' || usercream == 'Y')): 
+            Evaluates to true if all the above relational expressions are true.
+
+
+                             For Coffee 3:
+         Relational Expressions:
+             user_s == 'R' || user_s == 'r': Checks if the user's preference is 'R' or 'r' (Rich).
+             servings >= 10: Checks if the number of servings is 10 or more.
+             usercream == 'y' || usercream == 'Y': Checks if the user wants cream ('y' or 'Y').
+         Logical Expression:
+             ((user_s == 'R' || user_s == 'r') && (servings >= 10) && (usercream == 'y' || usercream == 'Y')):
+             Evaluates to true if all the above relational expressions are true.
+
+
+2. // Using De Morgan's Law
+    !((product1_ID == product3_ID) || (product2_ID == product3_ID));
+
+   // Not using De Morgan's Law
+    (product1_ID != product3_ID) && (product2_ID != product3_ID);
+
+I didnt use De morgan's Law.
+
+3. way #1 
+    char coffeeType1, coffeeType2, coffeeType3; // 'L' for Light, 'M' for Medium, 'R' for Rich
+    int coffeeWeight1, coffeeWeight2, coffeeWeight3; // Bag weight in grams
+    char coffeeCream1, coffeeCream2, coffeeCream3; // 'Y' for Yes, 'N' for No
+    char userCoffeeStrength, userLikesCream; // User preferences
+    int dailyServings;
+    const double GRAMS_IN_LBS = 453.5924;
+
+   way #2
+    // Coffee Product 1
+    char coffeeType1;  // 'L' for Light, 'M' for Medium, 'R' for Rich
+    int coffeeWeight1; // Bag weight in grams
+    char coffeeCream1; // 'Y' for Yes, 'N' for No
+
+    // Coffee Product 2
+    char coffeeType2;
+    int coffeeWeight2;
+    char coffeeCream2;
+
+    // Coffee Product 3
+    char coffeeType3;
+    int coffeeWeight3;
+    char coffeeCream3;
+
+    // User Preferences
+    char userCoffeeStrength; // User's preferred coffee strength
+    char userLikesCream;     // 'Y' for Yes, 'N' for No
+    int dailyServings;       // Typical number of daily servings

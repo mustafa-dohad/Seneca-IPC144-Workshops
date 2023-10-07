@@ -1,0 +1,12 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww13500\viewh21000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs80 \cf0 1. I have previous programming experience as I spent a brief amount of time on computer science and studied 2 semesters back in my country, I\'92ve studied C programming and Java in those 2 semesters also on Coursera I have studied Python but right now I\'92m on the basic level.\
+\
+2. I code on my MacBook and use vs code so initially I had to install a package for compiling such as gcc so in my Mac terminal I type \'93gcc -o <filename> <filename.c>\'94 and then ./filename and it compiles automatically. I guess the compiling process would be the program using header files such as stdio.h for standard input output and math.h for mathematics processing.\
+\
+4. I hope to gain a better knowledge on programming and computational thinking and brushing up my skills on C language also the matrix server is new to me so using command prompt/terminal would be a great way for me to learn to use the keyboard more and mouse less and get a better understanding of shell commands and servers of my computer. }

@@ -1,0 +1,33 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #5
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+
+1. Using variables and macros instead of hardcoding values provides the following advantages:
+    Readability: Makes the code more understandable by using meaningful names.
+    Maintainability: Easier to update values consistently throughout the code.
+    Error Prevention: Reduces the risk of invalid inputs and errors.
+
+2. The sum and average logic is placed outside of any validation routine in this code for two key reasons:
+
+  a. Separation: In software design, it's beneficial to separate different concerns or responsibilities
+     into distinct parts of the code. Validation should focus solely on checking whether the entered values meet the criteria
+     (e.g., within the specific range), while summing and averaging are arithmetic operations. This separation makes the code
+     more modular, easier to understand, and maintain. It also allows for better code reuse since the sum and average logic
+     can be used elsewhere if needed.
+
+  b. Error Handling and User Experience: Placing the sum and average logic outside of the validation loop ensures that these
+     calculations are performed only when valid data is available. If the sum and average logic were included within the validation
+     loop, these calculations might occur with invalid or incomplete data, leading to inaccurate results and potentially confusing 
+     error messages for the user. By performing these calculations after validation, the code ensures a smoother and more reliable user experience.
+
+In summary, separating validation from the sum and average logic enhances code modularity and user experience by keeping distinct responsibilities
+in their respective places, as demonstrated in this workshop.
