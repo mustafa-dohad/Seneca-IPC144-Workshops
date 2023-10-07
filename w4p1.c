@@ -17,68 +17,72 @@ int main(void)
 {
     char ch;
     int num;
+    
     printf("+----------------------+\n");
     printf("Loop application STARTED\n");
     printf("+----------------------+\n\n");
+    
     do
     {
-        printf("D = do/while | W = while | F = for | Q = quit\n"); 
+        printf("D = do/while | W = while | F = for | Q = quit\n");
         printf("Enter loop type and the number of times to iterate (Quit=Q0): ");
         scanf(" %c%d", &ch, &num);
-        if (ch == 'Q' && num == 0) //if the user enter Q0 then the loop breaks and enter the main function
-        {
-            break; // therefore the break syntax
-        }
-        else if (ch != 'D' && ch != 'W' && ch != 'F' && ch != 'Q') //if any other character except the one mentioned is entered
-        {
-            printf("ERROR: Invalid entered value(s)!");
-        }
         
-        else if (ch == 'Q' && !(num == 0)) //if the char is correct that is : Q but the num is incorrect 
+        if (ch == 'Q' && num == 0)
         {
-            printf("ERROR: To quit, the number of iterations should be 0!");
+            break; // Exit the loop and quit the program if Q0 is entered.
         }
-        else if (num <= 0) // if the value of num is less than zero
+        else if (ch != 'D' && ch != 'W' && ch != 'F' && ch != 'Q')
         {
-            printf("ERROR: Invalid entered value(s)!");
+            printf("ERROR: Invalid entered value(s)!"); // Handle invalid characters.
         }
-        else if (num < 3 || num > 20) // if the num is not in the range of 3 or 20 
+        else if (ch == 'Q' && !(num == 0))
         {
-            printf("ERROR: The number of iterations must be between 3-20 inclusive!");
-        } //putting all the necessary if conditions before so that i receive the desired output and theres no room for error
+            printf("ERROR: To quit, the number of iterations should be 0!"); // Handle incorrect Q usage.
+        }
+        else if (num <= 0)
+        {
+            printf("ERROR: Invalid entered value(s)!"); // Handle non-positive numbers.
+        }
+        else if (num < 3 || num > 20)
+        {
+            printf("ERROR: The number of iterations must be between 3-20 inclusive!"); // Handle out-of-range numbers.
+        }
         else if (ch == 'D' && num >= 3)
         {
             printf("DO-WHILE: ");
             int i;
-            for ( i=0 ; i < num; i++) //this will print the character on the same line as DO-WHILE
+            for (i = 0; i < num; i++)
             {
-                printf("%c", ch); //where the character is looping and iterating according to the num value 
+                printf("%c", ch); // Print characters for do-while loop.
             }
         }
         else if (ch == 'W' && num >= 3)
         {
             printf("WHILE   : ");
             int i;
-            for ( i=0 ; i < num; i++)
+            for (i = 0; i < num; i++)
             {
-                printf("%c", ch);
+                printf("%c", ch); // Print characters for while loop.
             }
         }
         else if (ch == 'F' && num >= 3)
         {
             printf("FOR     : ");
             int i;
-            for ( i=0 ; i < num; i++)
+            for (i = 0; i < num; i++)
             {
-                printf("%c", ch);
+                printf("%c", ch); // Print characters for for loop.
             }
         }
 
-
         printf("\n\n");
-    } while (1);
+    } while (1); // Infinite loop until explicitly quit.
+
     printf("\n+--------------------+\n");
     printf("Loop application ENDED\n");
     printf("+--------------------+\n");
+    
     return 0;
 }
+
