@@ -1,0 +1,56 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #8
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Benefit of Two Return Methods:
+   - Positive:
+    This feature increases flexibility by allowing users to choose how they want to 
+    receive function outputs, either through return values or by modifying an argument. 
+    This accommodates different programming styles and preferences, making the code more 
+    adaptable to diverse use cases.
+
+   - Negative: The dual return method may lead to confusion or misuse, as users might not 
+   be clear about which method to rely on. This could potentially introduce bugs and make the code 
+   less readable and maintainable. It may be challenging to enforce a consistent and clear usage pattern.
+
+2. Cohesion and Coupling:
+   - Less Than Perfect Cohesion:
+    Function: processOrder
+    Issue: This function might handle both order validation and email notification, which can be seen as 
+    a violation of the single responsibility principle.
+    Improvement: Split this function into two separate functions: one for order validation (validateOrder) 
+    and another for sending email notifications (sendOrderNotification). This separation enhances cohesion
+    by ensuring that each function has a clear and distinct responsibility.
+
+   - Coupling Improvement:
+    Function: updateCustomerInfo
+    Issue: This function may directly interact with the customer database, creating a tight coupling between 
+    the application logic and the data storage mechanism.
+    Improvement: Create a separate function responsible for database interactions (e.g., updateDatabase) and 
+    have updateCustomerInfo call this function. This way, the database logic is encapsulated, reducing the coupling 
+    between the application logic and the database. This makes the code more modular and easier to maintain, as changes 
+    to the database won't directly impact the customer information update logic.
+
+3. Advantages of Passing Structures:
+   - Advantages:
+    Passing structures to functions allows bundling related data together, promoting better organization and readability. 
+    It reduces the number of function parameters, making the code cleaner. Additionally, it supports passing complex data 
+    structures, enhancing the expressiveness of the code.
+
+   - Efficiency Improvement:
+    To make structure passing more efficient, consider using pointers to structures rather than passing structures by value.
+    This minimizes the overhead of copying large structures, improving performance. Also, consider using const pointers if 
+    the function does not need to modify the structure.
+
+   - Improving "displayCatfoodData" Function:
+    Instead of passing individual parameters for cat food data, pass a structure (e.g., `CatFoodData`) containing all relevant information.
+    If the function only needs to read data and not modify it, use a const pointer to the structure to avoid unintentional modifications.
+    Ensure that the structure is well-documented, specifying the expected fields and their meanings for clarity.

@@ -1,0 +1,62 @@
+///////////////////////////////////////////////////////////////////////////
+                              Reflection
+                          Workshop - #6 (P2)
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+Email      : mna26@myseneca.ca
+Section    : ZGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. In my code, I have used a `for` loop for most of the iterations, and that's 
+   the most preferred iteration construct when working with arrays. Here are the 
+   reasons why `for` loops are commonly preferred over other options:
+
+   a. Initialization, Condition, and Iteration Expression in One Place: The `for` 
+   loop provides a convenient way to specify the initialization, condition, and 
+   iteration expressions all in one place. This makes it easier to read and understand 
+   the loop's control flow.
+
+   b. Explicit Control: The `for` loop explicitly defines the loop control variables, 
+   making it clear how the loop will behave. It's easy to see the loop's intent, 
+   including the starting value, stopping condition, and how the loop variable is updated.
+
+   c. Optimized for Array Iteration**: When working with arrays, you often need to iterate 
+   through them in a sequential manner. The `for` loop is designed for this purpose and 
+   is well-suited for iterating over arrays and collections.
+
+   d. Scope Control: Variables declared within the `for` loop's initialization section 
+   have limited scope. They are only accessible within the loop, which can help prevent 
+   accidental modification outside of the loop.
+
+   In my code, I have used `for` loops effectively to iterate through arrays like `cost`, 
+   `priority`, and `finance_op`. This choice is appropriate because it allows me to clearly specify 
+   the range and behavior of the loop, making the code more readable and maintainable.
+
+It's worth noting that while `for` loops are often the preferred choice for array iteration, 
+other loop constructs like `while` and `do-while` have their use cases, especially when dealing 
+with more complex control flows or situations where you don't know the number of iterations in advance.
+However, in your code, `for` loops are a suitable choice for the given requirements.
+
+2. To test and debug your program effectively:
+
+      a. Review your code for syntax errors.
+      b. Compile the code to catch compiler errors.
+      c. Run the program with sample data.
+      d. Use debugging tools or print statements.
+      e. Isolate and analyze the problem.
+      f. Check error messages and output.
+      g. Review logic and algorithms.
+      h. Step through the code mentally.
+      i. Consult documentation or references.
+      j. Ask for help if needed.
+      k. Test components incrementally.
+      l. Perform regression testing after fixes.
+
+3. Since i have written the code and i know where what it so upon receiving the error feedback first
+   what i do is that I will rerun the program and enter the correct value to that it matches and satisfy 
+   the output also will briefly check if all the inputs match together. 

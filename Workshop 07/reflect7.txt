@@ -1,0 +1,61 @@
+///////////////////////////////////////////////////////////////////////////
+                               Reflection
+                             Workshop - #7
+Full Name  : Mustafa Dohad
+Student ID#: 123090235
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+///////////////////////////////////////////////////////////////////////////
+
+1. Yes, I successfully coded the non-repetitive sections of logic in the game play portion.
+   To accomplish this, I made efficient use of loops and conditional statements, which allowed
+   me to create the game board, ruler, and player position without unnecessary repetitions.
+   For the game board, I used a character array called `board` with a length equal to the `path_length`.
+   Initially, I filled the board with dashes ("-"). As the game progresses, I updated the board 
+   based on the player's moves. This approach eliminates redundancy because the updates to the board 
+   are determined by the player's actions, and I'm not manually repeating the board's state.
+   To draw the ruler at the top of the board, I employed a loop that iterates over the `path_length` and prints
+   the appropriate characters. This method is non-repetitive and ensures that the ruler is displayed clearly without
+   redundant code.
+   Tracking the player's position was accomplished by marking it with a "˅" character on the board when the player makes
+   a move. To do this, I iterated over the `path_length` and checked if the current position matched the player's next move.
+   If it did, I printed the "˅" character; otherwise, I printed a space. This method effectively conveys the player's position 
+   on the board without redundancy.
+   In summary, by using loops and conditionals judiciously, I organized the code in a way that makes these sections of the game 
+   logic efficient, non-repetitive, and easy to understand.
+
+
+2. Sure, using structures in this program makes it easier to manage and understand. Think of structures like neatly organized 
+   containers for data. They help keep related information together and give meaningful names to things. Without structures, we'd
+   have a mess of scattered variables, making the code confusing and prone to errors. Structures make the program cleaner, more 
+   readable, and ready for future changes or improvements.
+
+
+3. // First Level of Nesting
+   while (lives > 0 && moves > 0) {
+    // Second Level of Nesting
+    // While loop to ensure a valid next move:
+    while (!validnextmove) {
+        // Condition to check if the player's input for the next move is within the valid range.
+    }
+    // Third Level of Nesting
+    // Series of conditional statements to determine the outcome of the player's move:
+    if (board[nextmove - 1] != '-') {
+        // Dope! You've been here before!
+    } else if (bombs[nextmove - 1] == 1 && treasure[nextmove - 1] == 1) {
+        // [&] !!! BOOOOOM !!! [&]
+        // [&] $$$ Life Insurance Payout!!! [&]
+    } else if (bombs[nextmove - 1] == 1) {
+        // [&] !!! BOOOOOM !!! [&]
+    } else if (treasure[nextmove - 1] == 1) {
+        // [$] $$$ Found Treasure! $$$ [$]
+    } else if (bombs[nextmove - 1] == 0 && treasure[nextmove - 1] == 0) {
+        // [.] ...Nothing found here... [.]
+    }
+    // End of Third Level Nesting
+    }
+    // End of Second Level Nesting
+    // End of First Level Nesting
