@@ -1,0 +1,58 @@
+/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3 (Reflection)
+Full Name: Mustafa Dohad
+Student ID: 123090235
+Email: mna26@myseneca.ca
+Section: ZGG
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+1. In this milestone, the development involved the creation of additional functions beyond the specified ones. 
+   Three crucial functions were implemented, each serving a unique purpose:
+
+    a) Function: "void viewAllAppointments(struct ClinicData *data);"
+       Purpose: This function serves to print the contents of all appointments alongside their respective patient data.
+       Value: Offering veterinary personnel an efficient method of time management, it provides a consolidated view of 
+       daily appointments and their scheduled timings. This aids in scheduling and managing various patient processes, 
+       contributing to overall operational efficiency.
+
+    b) Function: "void addAppointment(struct Appointment appointment[], int maxAppointments, struct Patient *patient, int maxPatients)"
+       Purpose: The purpose of this function is to enable users to input new schedules, ensuring data integrity through 
+       validation steps.
+       Value: This function is valuable for providing the capability to add new schedules without disrupting existing ones. 
+       With robust validation steps, it minimizes the chances of errors, contributing to a more reliable and error-resistant system.
+
+    c) Function: "void viewAppointmentSchedule(struct ClinicData *data)"
+       Purpose: This function showcases appointments scheduled for a specific day based on user input.
+       Value: Enhancing the user interface, it allows users to retrieve a comprehensive list of appointments on a specific day.
+       The function contributes to organized data presentation, providing a focused overview of scheduled appointments for better patient care.
+
+2. The limited usage of the "scanf" function in the client.c source code was intentional, with a deliberate effort to minimize 
+   its occurrence. The primary reasons for this strategic decision include:
+
+   Minimizing User Interaction: By reducing the number of "scanf" calls, the user experiences a smoother interaction with the 
+   system, resulting in increased satisfaction and a streamlined user journey.
+
+   Enhanced Program Manageability: A reduced number of "scanf" calls contribute to improved code manageability. Simplifying 
+   user input handling makes the code easier to understand, modify, and maintain.
+
+   Ensuring Data Integrity: Dedicated functions for different input types facilitate consistent and dependable data processing, 
+   contributing to the overall integrity of the application's data.
+
+3. For each of the functions created in question one, the decision regarding module placement was influenced by the following factors:
+
+    a. "viewAllAppointmentsAllAppointments" Function:
+       Module Placement: This function resides in the "Clinic Display Functions" module. The decision is based on the need to consolidate 
+       display-related functions in one place, promoting readability and ease of maintenance.
+
+    b. "viewAppointmentSchedule" Function:
+       Module Placement: Integrated into the "Clinic Menu & Item Selection" module, this function logically belongs here as it constitutes 
+       one of the menu choices. The module handles user selections, making it an appropriate location for functions associated with menu choices.
+
+    c. "addAppointment" Function:
+       Module Placement: Also placed in the "Clinic Menu & Item Selection" module, this function involves user input and interaction. 
+       By keeping user interaction functions together, the code structure remains coherent, enhancing user experience and maintainability.
